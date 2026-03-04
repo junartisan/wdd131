@@ -1,1 +1,0 @@
-This repository is for my BYU project started from March 2 2026
