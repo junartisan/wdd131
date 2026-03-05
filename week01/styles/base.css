@@ -1,33 +1,29 @@
 
-.ex5 .parent {
-    display: grid;
-    grid-template: auto 1fr auto / auto 1fr auto;
-  }
-  
-  .ex5 header {
-    padding: 2rem;
-    grid-column: 1 / 4;
-  }
 
-  .ex5 .left-side {
-    grid-column: 1 / 2;
-  }
+:root {    
+  /* change the values below to your colors from your palette */
+  --primary-color: #2c3e50;
+  --secondary-color: #3498db;
+  --accent-color: #e74c3c;
+  --text-color: #333;
+  --background-color: #ecf0f1;
+  --border-radius: 8px;
+  --box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
 
-  .ex5 main {
-    grid-column: 2 / 3;
-  }
 
-  .ex5 .right-side {
-    grid-column: 3 / 4;
-  }
 
-  .ex5 footer {
-    grid-column: 1 / 4;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  nav {
-	margin: 0 auto 2rem;
-	max-width: 90vw;
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
 }
 
 main {
