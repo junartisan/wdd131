@@ -1,0 +1,149 @@
+
+
+:root {    
+  /* change the values below to your colors from your palette */
+  --primary-color: #2c3e50;
+  --secondary-color: #3498db;
+  --accent-color: #e74c3c;
+  --text-color: #333;
+  --background-color: #ecf0f1;
+  --border-radius: 8px;
+  --box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+* {
+  /*General settings for the style */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+main {
+	display: grid;
+  /* Two columns: (main contentn takes 2 part of space and aside 1 part */
+  grid-template-columns: 1fr 350px;
+  grid-template-areas: none;
+  gap: 1rem;
+  margin: 1rem;
+	border: 1px solid rgb(0 0 0 / .2);
+	padding: 1rem;
+	background-color: #eee;
+  margin: 20px;
+}
+
+#main-content {
+  padding 1.5rem;
+  border-radius: 8px;
+  height: fit-content;
+  border: 1px solid #ddd;
+  margin: 1rem;
+
+}
+
+#main-content h1 {
+  display: flex;
+  justify-content: center;
+  background-color:rgb(0 110 182 / 1); ;
+  padding: 1rem;
+  color:#fff;
+
+}
+
+#main-content h2 {
+  text-align: center;
+}
+
+#main-content img {
+  padding: 1rem;
+}
+section {
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+
+aside {
+  padding 1.5rem;
+  border-radius: 8px;
+  height: fit-content;
+  border: 1px solid #ddd;
+  margin: 1rem;
+  
+}
+
+aside h1 {
+  display: flex;
+  justify-content: center;
+  background-color:rgb(0 110 182 / 1); ;
+  padding: 1rem;
+  color:#fff;
+}
+
+aside ul {
+  padding-left: 1.5rem;
+}
+
+#course-title {
+  display: flex;
+  justify-content: center;
+  
+  background-color:rgb(0 110 182 / 1); ;
+  padding: 1rem;
+  color:#fff;
+}
+
+#footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--primary-color);
+  color:#fff;
+  padding: 1.5rem;
+  align-items: center;
+}
+
+#lastModified {
+  color: #bdc3c7; /* Lighter grey for the timestamp */
+  font-style: italic;
+}
+
+.navigation {
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+	background-color: #333;
+	align-items: center;
+}
+.navigation li {
+	flex: 1 1 auto; /* What is the difference between auto and 100% flex-basis? - turn on link borders to view */
+}
+.navigation a {
+	font-weight: 700;
+	display: block;
+	color: #eee;
+	padding: 0.75rem;
+	text-decoration: none;
+	text-align: center;
+}
+
+.navigation a:hover {
+	text-decoration: underline;
+	text-decoration-color: yellow;
+}
+
+.card {
+  width: clamp(23ch, 50% 46ch);
+  display:flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+
