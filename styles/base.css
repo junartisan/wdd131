@@ -26,6 +26,9 @@ body {
   line-height: 1.6;
 }
 
+header {
+  margin: 0 auto;
+}
 main {
 	display: grid;
   /* Two columns: (main contentn takes 2 part of space and aside 1 part */
@@ -99,6 +102,9 @@ aside ul {
   color:#fff;
 }
 
+footer {
+  margin:0px
+}
 #footer {
   display: flex;
   flex-direction: column;
