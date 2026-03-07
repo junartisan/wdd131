@@ -29,7 +29,7 @@ body {
 main {
 	display: grid;
   /* Two columns: (main contentn takes 2 part of space and aside 1 part */
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 350px;
   grid-template-areas: none;
   gap: 1rem;
   margin: 1rem;
@@ -40,19 +40,30 @@ main {
 }
 
 #main-content {
- 
+  padding 1.5rem;
+  border-radius: 8px;
+  height: fit-content;
+  border: 1px solid #ddd;
+  margin: 1rem;
 
 }
 
 #main-content h1 {
   display: flex;
   justify-content: center;
-  
   background-color:rgb(0 110 182 / 1); ;
   padding: 1rem;
   color:#fff;
+
 }
 
+#main-content h2 {
+  text-align: center;
+}
+
+#main-content img {
+  padding: 1rem;
+}
 section {
   display: flex;
   margin-bottom: 2rem;
@@ -64,6 +75,8 @@ aside {
   border-radius: 8px;
   height: fit-content;
   border: 1px solid #ddd;
+  margin: 1rem;
+  
 }
 
 aside h1 {
@@ -72,6 +85,10 @@ aside h1 {
   background-color:rgb(0 110 182 / 1); ;
   padding: 1rem;
   color:#fff;
+}
+
+aside ul {
+  padding-left: 1.5rem;
 }
 
 #course-title {
@@ -85,12 +102,19 @@ aside h1 {
 
 #footer {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   background-color: var(--primary-color);
   color:#fff;
-  padding: 1rem;
-
+  padding: 1.5rem;
+  align-items: center;
 }
+
+#lastModified {
+  color: #bdc3c7; /* Lighter grey for the timestamp */
+  font-style: italic;
+}
+
 .navigation {
 	list-style: none;
 	display: flex;
