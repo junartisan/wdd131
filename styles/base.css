@@ -39,7 +39,7 @@ main {
   margin: 20px;
 }
 
-#main-content {
+#content {
   padding 1.5rem;
   border-radius: 8px;
   height: fit-content;
@@ -48,9 +48,8 @@ main {
 
 }
 
-#main-content h1 {
+#content h1 {
   display: flex;
-  justify-content: center;
   background-color:rgb(0 110 182 / 1); ;
   padding: 1rem;
   color:#fff;
@@ -140,10 +139,14 @@ aside ul {
 }
 
 .card {
-  width: clamp(23ch, 50% 46ch);
   display:flex;
   flex-direction: column;
   padding: 1rem;
+}
+
+.profile {
+  width: 200px;
+  height: 200px;
 }
 
 
