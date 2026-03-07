@@ -12,8 +12,8 @@
 }
 
 
-
 * {
+  /*General settings for the style */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -27,12 +27,70 @@ body {
 }
 
 main {
-	margin: 1rem;
+	display: grid;
+  /* Two columns: (main contentn takes 2 part of space and aside 1 part */
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: none;
+  gap: 1rem;
+  margin: 1rem;
 	border: 1px solid rgb(0 0 0 / .2);
 	padding: 1rem;
 	background-color: #eee;
+  margin: 20px;
 }
 
+#main-content {
+ 
+
+}
+
+#main-content h1 {
+  display: flex;
+  justify-content: center;
+  
+  background-color:rgb(0 110 182 / 1); ;
+  padding: 1rem;
+  color:#fff;
+}
+
+section {
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+
+aside {
+  padding 1.5rem;
+  border-radius: 8px;
+  height: fit-content;
+  border: 1px solid #ddd;
+}
+
+aside h1 {
+  display: flex;
+  justify-content: center;
+  background-color:rgb(0 110 182 / 1); ;
+  padding: 1rem;
+  color:#fff;
+}
+
+#course-title {
+  display: flex;
+  justify-content: center;
+  
+  background-color:rgb(0 110 182 / 1); ;
+  padding: 1rem;
+  color:#fff;
+}
+
+#footer {
+  display: flex;
+  justify-content: center;
+  background-color: var(--primary-color);
+  color:#fff;
+  padding: 1rem;
+
+}
 .navigation {
 	list-style: none;
 	display: flex;
@@ -56,3 +114,12 @@ main {
 	text-decoration: underline;
 	text-decoration-color: yellow;
 }
+
+.card {
+  width: clamp(23ch, 50% 46ch);
+  display:flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+

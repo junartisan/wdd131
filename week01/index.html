@@ -4,12 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WDD 131 – Dynamic Web Fundamentals – Rosendo Cuyasen</title>
-    <meta description="WDD131 Dynamic Web Fundamentals">
-    <meta author="Rosendo Cuyasen">
+    <meta name="title" content="WDD131 Dynamic Web Fundamentals">
+    <meta name="description" content="Learning WDD131 Dynamic Web Fundamentals">
+    <meta name="keywords" content="wdd131, byu pathway">
+    <meta name="author" content="Rosendo Cuyasen">
     <link rel="stylesheet" href="styles/base.css" >
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="scripts/getdates.js" defer></script>
+    
 </head>
 <body>
     <header>
@@ -27,32 +31,54 @@
     </header>
 
     <main>
-        <section>
+        <div id="main-content">
             <h1>About Me</h1>
-            <div class="card">
-                <img class="profile" src="" alt="Student Profile Image" with="200" height="200"/>
+        <section>
+            
+            <img class="profile" src="/week01/images/rosendo-cuyasen.webp"  alt="Student Profile Image" with="200" height="200"/>
+            <div class="card">    
                 <p>My name is Rosendo Cuyasen, and I am from the Phippines. I live
                     in Cebu City, it is where Christianity started in the country. I'm a trader and sometimes a tourist driver.
                     I am looking to transition into a career as
                     a software developer. In my free time, I love playing pickleball and
                     creating furniture.
                 </p>
-                <img src="/week01/images/rosendo-cuyasen.webp" >
-
-
+                
             </div>
-            <div class="country"></div>
         </section>
         
         <section class="card">
             <h2>Cebu, Philippines</h2>
             <img src="">
+            <p>Cebu, often called the "Queen City of the South," is the oldest city in the Philippines and a vibrant hub where history meets modern industry. Located in the Central Visayas, it serves as the country’s main domestic shipping port and a major center for software development, business processing, and tourism.
+
+                The province is world-renowned for its diverse attractions. In the north, Bantayan and Malapascua offer pristine white-sand beaches, while the south is famous for the Kawasan Falls and whale shark watching in Oslob. For history enthusiasts, the capital, Cebu City, preserves the Spanish colonial era through landmarks like Magellan’s Cross, the Basílica Minore del Santo Niño, and the Jesuit House in the historic Parian District.</p>
         </section>
 
+        </div>
+        <aside>
+            <h1>Web Dev Resources</h1>
+            <ul>
+                <li><a href="#">Dev.to Community</a></li>
+                <li><a href="#">Smashing Magazine</a></li>
+                <li><a href="#">CSS Tricks</a></li>
+                <li><a href="#">W3 Schools</a></li>
+                <li><a href="#">Udemy</a></li>
+                <li><a href="#">Lorem Picsum Image Placeholder</a></li>
+            </ul>
+        </aside>
+    
     </main>
+    
 
     <footer>
-        <span id="year">Rosendo Cuyasen - Philippines</span>
+            <div id="footer">
+            <p>
+                &copy; <span id="currentyear"></span> Rosendo Cuyasen - Cebu, Philippines
+            </p>
+        
+            <p id="lastModified"></p>
+        </div>
     </footer>
     
 </body>
