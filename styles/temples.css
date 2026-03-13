@@ -3,9 +3,9 @@ body {
     margin: 0;
     padding: 0;
     background-color: #e6f2ff;
-    color: #333;
+    color: #333; /* bg color */
 }
-
+/*header*/
 header {
     display: flex;
     justify-content: space-between;
@@ -28,7 +28,7 @@ header h1 {
     color: #fff;
     cursor: pointer;
 }
-
+/*menu for mobile */
 #menu::before {
     content: "☰";
 }
