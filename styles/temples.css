@@ -15,7 +15,9 @@ header {
     color: #fff;
     position: relative;
 }
-
+nav {
+    display: flex;
+}
 header h1 {
     font-size: 1.8rem;
     margin: 0;
