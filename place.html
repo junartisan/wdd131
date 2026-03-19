@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 – Places – Rosendo Cuyasen</title>
+    <meta name="title" content="WDD131 Dynamic Web Fundamentals">
+    <meta name="description" content="Learning WDD131 Dynamic Web Fundamentals - BYU Pathway the only way to learn better web applications - Rosendo Cuyasen Jr - Cebu Philippines">
+    <meta name="keywords" content="wdd131, byu pathway">
+    <meta name="author" content="Rosendo Cuyasen">
+    <link rel="stylesheet" href="styles/place.css" >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="scripts/getdates.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Cebu, Philippines</h1>
+    </header>
+    <main>
+        <section class="hero">
+            <picture>
+                <source srcset="images/Whaleshark-Oslob-Cebu-Philippines.webp" media="(min-width: 1000px)">
+                <source srcset="images/Whaleshark-Oslob-Cebu-Philippines-small.webp" media="(min-width: 500px)">
+                <img src="images/Whaleshark-Oslob-Cebu-Philippines-small.webp" 
+                     alt="Whale shark swimming in the clear waters of Oslob, Cebu" 
+                     width="400" height="250" loading="lazy">
+            </picture>
+            
+        </section>
+        <section class="card cebu-info">
+            <h3>Cebu, Philippines</h3>
+            <ul class="stats-list">
+                <li><strong>Area:</strong> 4,468 km<sup>2</sup></li>
+                <li><strong>Population:</strong> 5.1 Million</li>
+                <li><strong>Languages:</strong> Cebuano, English</li>
+                <li><strong>Currency:</strong> Philippine Peso</li>
+                <li><strong>Timezone:</strong> UTC+8</li>
+                <li><strong>Calling Code:</strong> +63</li>
+                <li><strong>Internet TLD:</strong> .ph</li>
+            </ul>
+        </section>
+
+        <section class="card weather-card">
+            <h3 class="weather-heading">Weather</h3>
+            <p>Temperature: <span id="temp">8</span>°C</p>
+            <p>Wind Speed: <span id="speed">15</span> km/h</p>
+            <p>Wind Chill: <span id="windchill"></span></p>
+        </section>
+    
+        
+    
+    
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Rosendo Cuyasen - Cebu, Philippines 🇵🇭</p>
+        <p id="lastModified"></p>
+    </footer>
+    
+</body>
+</html>

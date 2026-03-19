@@ -1,0 +1,163 @@
+/* --- GLOBAL STYLES --- */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e6f2ff;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* --- HEADER & NAVIGATION --- */
+header {
+    background-color: #487ae6;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+}
+
+#menu {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.navigation {
+    display: none; 
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.navigation.open { display: block; }
+
+.navigation li a {
+    display: block;
+    padding: 1rem;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.navigation li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* --- MAIN CONTENT & HERO --- */
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    /* Default flex stack for mobile */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+}
+
+.hero {
+    position: relative;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-top: 5px solid #36454f;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* --- LARGE VIEW (Desktop) --- */
+@media (min-width: 768px) {
+    /* 1. Setup the main grid */
+    main {
+        display: grid;
+        grid-template-columns: 1fr; 
+        /* We don't need a gap here if we want them to touch/overlap */
+        gap: 0; 
+        position: relative;
+    }
+
+    /* 2. Place the Hero Image in Row 1 */
+    .hero {
+        grid-row: 1;
+        grid-column: 1;
+        z-index: 1; /* Sits behind */
+    }
+
+    /* 3. Place the Weather Card ALSO in Row 1 */
+    .weather-card {
+        grid-row: 1;
+        grid-column: 1;
+        z-index: 2; /* Sits on top */
+        
+        /* Positioning the overlap */
+        justify-self: end;    /* Moves it to the right */
+        align-self: center;    /* Moves it to the top */
+        margin: 20px;         /* Adds space from the edges of the image */
+        
+        /* Style adjustments for visibility */
+        background-color: rgba(255, 255, 255, 0.85); /* Semi-transparent white */
+        backdrop-filter: blur(5px);                  /* Modern glass effect */
+        max-width: 300px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+
+    .cebu-info {
+        grid-row: 1;
+        grid-column: 1;
+        z-index: 2; /* Sits on top */
+        
+        /* Positioning the overlap */
+        justify-self: start;    /* Moves it to the right */
+        align-self: start;    /* Moves it to the top */
+        margin: 20px;         /* Adds space from the edges of the image */
+        
+        /* Style adjustments for visibility */
+        background-color: rgba(255, 255, 255, 0.85); /* Semi-transparent white */
+        backdrop-filter: blur(5px);                  /* Modern glass effect */
+        max-width: 300px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+    /* 4. Keep the other cards below the overlap */
+    .grid-container {
+        grid-row: 2;
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+/* --- FOOTER --- */
+footer {
+    margin-top: 3rem;
+    background-color: #487ae6;
+    color: #fff;
+    text-align: center; 
+    padding: 2rem;
+}
