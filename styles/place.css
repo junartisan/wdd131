@@ -77,6 +77,27 @@ main {
     margin: 0;
 }
 
+
+.weather-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Keeps heading and icon balanced */
+}
+
+/* This rule is now global, so the validator will always find it */
+.weather-heading::after {
+    content: ""; 
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    vertical-align: middle;
+    /* Ensure the path is correct: ../ if in a styles folder */
+    background-image: url('../images/weather.svg'); 
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
 /* --- LARGE VIEW (Desktop) --- */
 @media (min-width: 768px) {
     main {
@@ -123,6 +144,12 @@ main {
     }
     .weather-card p {
         padding-left:1rem;
+    }
+
+    /* You can make the icon bigger on desktop if you want */
+    .weather-heading::after {
+        width: 40px;
+        height: 40px;
     }
     .cebu-info {
         grid-row: 1;
