@@ -1,0 +1,142 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e6f2ff;
+    color: #333; /* bg color */
+}
+/*header*/
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #36454f;
+    color: #fff;
+    position: relative;
+}
+nav {
+    display: flex;
+}
+header h1 {
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+#menu {
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+/*menu for mobile */
+#menu::before {
+    content: "☰";
+}
+
+#menu.open::before {
+    content: "❌";
+}
+
+.navigation {
+    display: none; /* hide by default on mobile */
+    flex-direction: column;
+    background-color: #333;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+
+.navigation ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation li {
+    border-bottom: 1px solid #555;
+}
+
+.navigation a {
+    display: block;
+    padding: 1rem;
+    text-decoration: none;
+    color: #fff;
+}
+
+.navigation a:hover {
+    background-color: #555;
+    color: #fff;
+}
+
+/* Show menu when open */
+.navigation.open {
+    display: flex;
+}
+
+/* Main Content */
+main {
+    padding: 1rem;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+main h1 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+/* Temple Grid */
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    justify-items: center;
+}
+
+figure {
+    background-color: #fff;
+    padding: 0.5rem;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+img.hover {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+img.hover:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+img.rocorn {
+    border-radius: 15px 150px;
+}
+
+/* Figcaption */
+figcaption {
+    font-size: 0.85rem;
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+/* Footer */
+footer {
+    margin-top: 2rem;
+    background-color: #36454f;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
