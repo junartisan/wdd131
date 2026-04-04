@@ -108,6 +108,19 @@ main {
     font-family: inherit;
 }
 
+.check-box-group {
+    display: flex;
+    flex-direction: column; /* Stacks the checkboxes vertically */
+    gap: 10px;              /* Space between each checkbox row */
+}
+
+.checkbox-group label {
+    display: flex;
+    align-items: center; /* Vertically centers the text with the box */
+    cursor: pointer;
+    font-weight: normal; /* Labels shouldn't be bold here */
+    margin-top: 0;       /* Removes extra spacing */
+}
 .wf1 textarea {
     min-height: 100px;
     resize: vertical;
