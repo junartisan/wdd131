@@ -22,17 +22,18 @@
         <form method="get" action="review.html" class="wf1">
             <fieldset>
                 <legend>Review Details</legend> <label for="product-name">Product Name</label>
+                <label for="product-name">Product Name</label>
                 <select name="productName" id="product-name" required>
-                    <option value="">Please select &#9662;</option>
-                    <option value="software">Software Development</option>
-                    <option value="creative">Creative Professional</option>
-                    <option value="info">Information Technology</option>
-                    <option value="data">Data Professional</option>
-                    <option value="construction">Construction</option>
-                    <option value="manufacturing">Manufacturing</option>
-                    <option value="business">Business</option>
-                    <option value="security">Cyber Security</option>
-                </select>
+            <option value="" id="placeholder" disabled selected>Select a Product ...</option>
+            <option value="software">Software Development</option>
+            <option value="creative">Creative Professional</option>
+            <option value="info">Information Technology</option>
+            <option value="data">Data Professional</option>
+            <option value="construction">Construction</option>
+            <option value="manufacturing">Manufacturing</option>
+            <option value="business">Business</option>
+            <option value="security">Cyber Security</option>
+        </select>
 
                 <p>Overall Rating</p>
                 <div class="star-rating">
