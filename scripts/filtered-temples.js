@@ -199,7 +199,8 @@ function displayTemples(filteredTemples) {
 const oldLink = document.querySelector("#old");
 const newLink = document.querySelector("#new");
 const homeLink = document.querySelector("#home");
-
+const largeLink = document.querySelector("#large");
+const smallLink = document.querySelector("#small");
 // Old Filter: Dedicated before 1900
 oldLink.addEventListener("click", () => {
   const oldTemples = temples.filter(temple => {
@@ -216,6 +217,22 @@ newLink.addEventListener("click", () => {
       return year > 2000;
   });
   displayTemples(newTemples);
+});
+
+// New Filter: Large Temple
+largeLink.addEventListener("click", () => {
+  const largeTemples = temples.filter(temple => {
+      return temple.area > 90000;
+  });
+  displayTemples(largeTemples);
+});
+
+// Small Filter: Area less than 10,000 square feet (Optional, but common for this task)
+smallLink.addEventListener("click", () => {
+  const smallTemples = temples.filter(temple => {
+      return temple.area < 10000;
+  });
+  displayTemples(smallTemples);
 });
 
 // Home Filter: Show all
