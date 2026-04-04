@@ -1,68 +1,53 @@
-/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+/*----------- 1. DOCUMENT/BODY STYLING -----------*/
+/* Found once at top-level */
 html {
     -webkit-text-size-adjust: 100%; 
     -ms-text-size-adjust: 100%;
 }
 
-/*----------- apply a natural box layout model to all elements --------------*/
 * { 
     box-sizing: border-box; 
 }
 
-/*----------- BODY --------------*/
 body {
     font-size: 16px;
-    font-family: Verdana, sans-serif;
+    font-family: 'Roboto', Verdana, sans-serif;
     line-height: 1.5;
     margin: 0;
     background-color: #f9f9f9;
+    color: #333;
 }
 
-/*----------- HEADER --------------*/
+/*----------- 2. LAYOUT ELEMENTS -----------*/
 header {
     padding: 1.5rem 2%;
-    background-color: #445ba9; /* Match legend color for consistency */
+    background-color: #445ba9;
     color: white;
     text-align: center;
 }
-header h1 { margin: 0; font-size: 1.8rem; }
 
-/*----------- NAVIGATION (Simplified for Mobile First) --------------*/
-nav {
-    background-color: #333;
-}
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex; /* Flex makes it easier to stack or row */
-    flex-direction: column;
-}
-nav ul li { border-bottom: solid 1px #444; }
-nav ul li a {
-    display: block;
-    color: #eee;
-    padding: 1rem;
-    text-decoration: none;
-    text-align: center;
-}
-nav ul li a:hover { background-color: #555; }
-
-/*----------- MAIN --------------*/
 main {
     padding: 1rem 2%;
     max-width: 800px;
     margin: 0 auto;
+    min-height: 20rem;
 }
 
-/*---------- FORM STYLING ----------*/
+footer {
+    background-color: #333;
+    color: white;
+    padding: 2rem 2%;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+/*----------- 3. FORM CONTROLS -----------*/
 .wf1 fieldset {
     margin: 2rem auto;
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 1.5rem 4%;
     background-color: white;
-    /* Removed fixed 350px width so it works on mobile */
     max-width: 500px; 
 }
 
@@ -81,25 +66,13 @@ main {
     font-weight: bold;
 }
 
-/* Specific styling for checkboxes/radios so labels don't stack */
-.wf1 label.side {
-    display: flex;
-    align-items: center;
-    font-weight: normal;
-    margin-top: 0.5rem;
-    color: #333;
-}
-
+/* Inputs, Selects, and Textareas combined */
 .wf1 input[type="text"],
-.wf1 input[type="email"],
-.wf1 input[type="tel"],
-.wf1 input[type="url"],
 .wf1 input[type="date"],
-.wf1 input[type="number"],
 .wf1 select,
 .wf1 textarea {
     display: block;
-    width: 100%; /* Spans the full width of fieldset */
+    width: 100%;
     padding: 0.8rem;
     margin-top: 0.5rem;
     border: solid 1px #bbb;
@@ -108,24 +81,28 @@ main {
     font-family: inherit;
 }
 
-.check-box-group {
-    display: flex;
-    flex-direction: column; /* Stacks the checkboxes vertically */
-    gap: 10px;              /* Space between each checkbox row */
-}
-
-.checkbox-group label {
-    display: flex;
-    align-items: center; /* Vertically centers the text with the box */
-    cursor: pointer;
-    font-weight: normal; /* Labels shouldn't be bold here */
-    margin-top: 0;       /* Removes extra spacing */
-}
 .wf1 textarea {
     min-height: 100px;
     resize: vertical;
 }
 
+/* Checkbox Alignment Fix: Text on Right */
+.wf1 input[type="checkbox"] {
+    display: inline-block;
+    width: auto;
+    
+}
+
+/* Checkbox labels are not bold and sit next to the box */
+.wf1 input[type="checkbox"] + label {
+    display: inline-block;
+    font-weight: normal;
+    color: #333;
+    margin-top: 0;
+    cursor: pointer;
+}
+
+/* Submit Button */
 .wf1 input[type="submit"] {
     border: none;
     background: linear-gradient(#9c2c13, #6f200e);
@@ -137,25 +114,16 @@ main {
     cursor: pointer;
     font-size: 1.1rem;
     box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-    transition: background 0.3s;
 }
 
-.wf1 input[type="submit"]:hover {
-    background: #9c2c13;
-}
+/* Validation Borders */
+.wf1 input:required { border-left: solid 6px #cd5c5c; }
+.wf1 input:required:valid { border-left: solid 6px #2e8b57; }
 
-/* Validation styling */
-.wf1 input:required {
-    border-left: solid 6px #cd5c5c; /* Use left border for better flow */
-}
-.wf1 input:required:valid {
-    border-left: solid 6px #2e8b57;
-}
-
-/*----------- STAR RATING --------------*/
+/*----------- 4. STAR RATING (Consolidated) -----------*/
 .star-rating {
     display: flex;
-    flex-direction: row-reverse; /* Important for the CSS logic */
+    flex-direction: row-reverse;
     justify-content: center;
     margin: 10px 0;
 }
@@ -169,27 +137,24 @@ main {
     color: #ccc;
     cursor: pointer;
     padding: 0 5px;
-    margin: 0; /* Override the standard label margin */
+    margin: 0; /* Overrides the 1.5rem margin from .wf1 label */
 }
 
-/* Empty Star Symbol */
 .star-rating label::before {
-    content: '\2605'; 
+    content: '\2605'; /* Solid Star */
 }
 
-/* Gold color for selection and hover */
 .star-rating input:checked ~ label,
 .star-rating label:hover,
 .star-rating label:hover ~ label {
     color: #ffcc00;
 }
 
-/*----------- FOOTER --------------*/
-footer {
-    background-color: #333;
-    color: white;
-    padding: 2rem 2%;
-    text-align: center;
-    margin-top: 2rem;
+/*----------- 5. MEDIA QUERIES (At the very bottom) -----------*/
+@media only screen and (min-width: 35rem) {
+    /* Tablet specific adjustments here */
 }
-footer p { margin: 0.5rem 0; font-size: 0.9rem; }
+
+@media only screen and (min-width: 64rem) {
+    /* Desktop specific adjustments here */
+}
