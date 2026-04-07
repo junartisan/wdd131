@@ -150,6 +150,31 @@ footer {
     color: #ffcc00;
 }
 
+/* Each row of checkbox + label */
+.checkbox-container {
+    display: flex;          /* Use Flexbox for alignment */
+    align-items: center;    /* Vertically centers the box with the text */
+    margin-bottom: 0.5rem;  /* Space between each option */
+}
+
+/* Target the checkbox specifically */
+.checkbox-container input[type="checkbox"] {
+    width: 18px;            /* Set a consistent size */
+    height: 18px;
+    margin: 0 10px 0 0;     /* Right margin only, to push text away */
+    cursor: pointer;
+    flex-shrink: 0;         /* Prevents the checkbox from squishing */
+}
+
+/* Target the label specifically */
+.checkbox-container label {
+    margin-top: 0;          /* Reset your global label top-margin */
+    font-weight: normal;    /* Standard weight for options */
+    color: #333;            /* Neutral color for better readability */
+    cursor: pointer;
+    font-size: 1rem;
+}
+
 /*----------- 5. MEDIA QUERIES (At the very bottom) -----------*/
 @media only screen and (min-width: 35rem) {
     /* Tablet specific adjustments here */
