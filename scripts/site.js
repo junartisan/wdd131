@@ -60,3 +60,94 @@ hamButton.addEventListener('click', () => {
 	navigation.classList.toggle('open');
 	hamButton.classList.toggle('open');
 });
+
+/* =========================
+   ARRAY + OBJECT
+========================= */
+const slides = [
+    {
+        title: "Modern Celestial Room",
+        image: "../images/cebu-temple.png",
+        description: "Clean and elegant design."
+    },
+    {
+        title: "Minimalist Living Room",
+        image: "../images/decorative-wall-mirrors.jpg",
+        description: "Simple and relaxing atmosphere."
+    },
+    {
+        title: "Temple Reworks ",
+        image: "../images/Finishing-Work-on-the-Salt-Lake-Temples-Celestial-and-Sealing-Rooms.jpg",
+        description: "Stylish and functional space."
+    }
+];
+
+/* =========================
+   STATE (localStorage)
+========================= */
+let currentIndex = localStorage.getItem("slideIndex")
+    ? parseInt(localStorage.getItem("slideIndex"))
+    : 0;
+
+/* =========================
+   FUNCTION 1: SHOW SLIDE
+========================= */
+function showSlide(index) {
+    const slide = slides[index];
+
+    document.getElementById("title").textContent = `${slide.title}`;
+    document.getElementById("image").src = `${slide.image}`;
+    document.getElementById("description").textContent = `${slide.description}`;
+
+    localStorage.setItem("slideIndex", index);
+}
+
+/* =========================
+   FUNCTION 2: NEXT
+========================= */
+function nextSlide() {
+    currentIndex++;
+
+    // CONDITIONAL
+    if (currentIndex >= slides.length) {
+        currentIndex = 0;
+    }
+
+    showSlide(currentIndex);
+}
+
+/* =========================
+   FUNCTION 3: PREVIOUS
+========================= */
+function prevSlide() {
+    currentIndex--;
+
+    // CONDITIONAL
+    if (currentIndex < 0) {
+        currentIndex = slides.length - 1;
+    }
+
+    showSlide(currentIndex);
+}
+
+/* =========================
+   FUNCTION 4: INIT
+========================= */
+function initSlider() {
+    // ARRAY METHOD
+    slides.forEach((slide, index) => {
+        console.log(`Slide ${index}: ${slide.title}`);
+    });
+
+    showSlide(currentIndex);
+}
+
+/* =========================
+   DOM + EVENT LISTENERS
+========================= */
+document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("nextBtn").addEventListener("click", nextSlide);
+    document.getElementById("prevBtn").addEventListener("click", prevSlide);
+
+    initSlider();
+});

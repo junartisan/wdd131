@@ -55,3 +55,26 @@
         text-align: center;
     }
 }
+
+@media (min-width: 768px) {
+    .slider {
+        max-width: 1000px;
+        padding: 25px;
+    }
+
+    .slider h2 {
+        font-size: 1.8rem;
+    }
+
+    .slider p {
+        font-size: 1.1rem;
+    }
+
+    .controls button:hover {
+        background: #588157;
+        cursor: pointer;
+    }
+    .arrow:hover {
+        background: #588157;
+    }
+}
