@@ -43,7 +43,6 @@ header h1 {
     width: 100%;
     max-width: 600px;
     margin: 20px auto;   /* 🔥 reduce vertical space */
-    background: #ffffff;
     padding: 15px;
     border-radius: 12px;
     text-align: center;
