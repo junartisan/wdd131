@@ -78,3 +78,9 @@
         background: #588157;
     }
 }
+
+@media (max-width: 500px) {
+    .image-gallery {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on small screens */
+    }
+}
