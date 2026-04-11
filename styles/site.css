@@ -38,62 +38,86 @@ header h1 {
 #menu.open::before {
     content: "❌";
 }
-/* ✅ MOBILE-FIRST SLIDER FIX */
+/* ✅ MOBILE-FIRST SLIDER (OVERLAY VERSION) */
 .slider {
     width: 100%;
-    max-width: 600px;
-    margin: 20px auto;   /* 🔥 reduce vertical space */
-    padding: 15px;
-    border-radius: 12px;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    max-width: 100%;
+    margin: 10px 0;
+    padding: 0; /* 🔥 remove extra space */
 }
 
-/* Remove default spacing from elements inside slider */
-.slider h2,
-.slider p {
-    margin: 5px 0;
+/* Image container for overlay elements */
+.image-container {
+    position: relative;
 }
 
-.slider img {
+/* Image */
+.image-container img {
     width: 100%;
-    height: auto;             /* keeps image ratio */
-    border-radius: 10px;
-    margin: 5px 0;
+    height: auto;
     display: block;
+    border-radius: 10px;
 }
 
-.slider p {
-    font-size: 0.95rem;
+/* 🔥 Combined overlay (title + description) */
+.overlay-text {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+
+    background: linear-gradient(
+            to top,
+            rgba(0,0,0,0.7),
+            rgba(0,0,0,0)
+        );
+    color: #fff;
+
+    padding: 8px;
+    border-radius: 6px;
 }
 
-/* Better mobile buttons */
-/* Arrow buttons */
-.controls {
-    display: flex;
-    gap: 5px;
-    margin-top: 5px;
-    justify-content: space-between;
-    align-items: center;
+/* Title */
+.overlay-text h2 {
+    margin: 0;
+    font-size: 1.1rem;
 }
 
+/* Description BELOW title */
+.overlay-text p {
+    margin: 3px 0 0;
+    font-size: 0.85rem;
+}
+
+/* 🔥 Arrow buttons (on image edges) */
 .arrow {
-    
-    background: #2F6B3F;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    background: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
-    font-size: 1.2rem;
+
+    font-size: 1.3rem;
     padding: 6px 10px;
     border-radius: 50%;
-    cursor: pointer;
-    
 }
 
-/* Optional: better tap feel on mobile */
+/* Left arrow */
+.arrow.left {
+    left: 8px;
+}
+
+/* Right arrow */
+.arrow.right {
+    right: 8px;
+}
+
+/* Tap feedback */
 .arrow:active {
-    background: #588157;
-}
-
+    background: rgba(0, 0, 0, 0.7);
+} 
 .navigation {
     display: none; /* hide by default on mobile */
     flex-direction: column;
@@ -103,6 +127,7 @@ header h1 {
     position: absolute;
     top: 100%;
     left: 0;
+    z-index: 9999;
 }
 
 .navigation a:active, 
@@ -218,7 +243,7 @@ section h2 {
     border: 1px solid #ddd;
     border-radius: 6px;
     padding: .5rem 2%;
-    width: 380px;
+    width: 300px;
 
 }
 
@@ -250,14 +275,14 @@ section h2 {
 .wf1 input[type="number"]
 
 {
-    background-color: #eee;
+    background-color: #fff;
     display: block;
     border: solid 1px #999;
     border-radius: 6px;
     padding: .75rem;
     color: #555;
     width: 100%;
-    max-width: 320px;
+    max-width: 270px;
 }
 
 .wf1 input[type="radio"],
@@ -272,7 +297,7 @@ section h2 {
     border-radius: 6px;
     padding: .8rem;
     width:96%;
-    max-width: 320px;
+    max-width: 250px;
     margin: -1rem 2% 2rem 2%;
     box-shadow: 1px 1px 4px #999;
 }
@@ -283,6 +308,7 @@ section h2 {
 .wf1 input:required:valid {
     border-right: solid 5px green;
 }
+
 
 
 /* Footer */

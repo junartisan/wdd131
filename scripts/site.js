@@ -67,7 +67,7 @@ hamButton.addEventListener('click', () => {
 const slides = [
     {
         title: "Modern Celestial Room",
-        image: "../images/cebu-temple.png",
+        image: "../images/cebu-temple.webp",
         description: "Clean and elegant design."
     },
     {
