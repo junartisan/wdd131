@@ -59,7 +59,7 @@
 @media (min-width: 768px) {
     .slider {
         max-width: 1000px;
-        padding: 25px;
+        padding: 5px;
     }
 
     .slider h2 {
@@ -82,5 +82,19 @@
 @media (max-width: 500px) {
     .image-gallery {
         grid-template-columns: repeat(2, 1fr); /* 2 columns on small screens */
+    }
+}
+
+* Tablet and Desktop Styles */
+@media (min-width: 768px) {
+    .home_container {
+        /* Switch to side-by-side on larger screens */
+        flex-direction: row-reverse;
+        column-gap: 10px;
+    }
+
+    .box-1, .box-2 {
+        /* Go back to half-width on desktop */
+        width: 50%;
     }
 }
