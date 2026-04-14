@@ -11,19 +11,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles/site.css">
     <link rel="stylesheet" href="../styles/site-large.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="../scripts/site.js" defer></script>
 </head>
 
 <body>
     <header>
-        <h1>DDF</h1>    
+        <img src=""><a href="siteplan.html" alt="Logo">DDF</a></img>    
         <button id="menu"></button>
         <nav class="navigation">
             <ul>
                 <li><a href="#" id="home" title="Home">Home</a></li>
                 <li><a href="about.html" id="about" title="About">About</a></li>
                 <li><a href="projects.html" id="projects" title="Projects">Projects</a></li>
-                <li><a href="#" id="services" title="Service">Services</a></li>
+                <li><a href="services.html" id="services" title="Service">Services</a></li>
                 <li><a href="contact.html" id="contactus" title="Contactus">Contact Us</a></li>
             </ul>
         </nav>
@@ -62,8 +63,26 @@
             
         </section>
 
-        <h2>Services</h2>
-        <section class="services">
+        
+        <section class="our-services">
+            <h2>Services</h2>
+            <div class="container">
+                <div class="service">
+                    <i class="fa fa-paint-brush" aria-hidden="true"></i>
+                    <h3>Design-Bid-Build</h3>
+                    <p>This is the traditional method where the project is divided into distinct phases. The owner first hires an architect to create complete, detailed designs.</p>
+                </div>
+                <div class="service">
+                    <i class="fa fa-industry" aria-hidden="true"></i>
+                    <h3>Design-Build</h3>
+                    <p>In this model, the design and construction services are bundled into a single contract. The owner works with one entity responsible for both design and construction.</p>
+                </div>
+                <div class="service">
+                    <i class="fa fa-university" aria-hidden="true"></i>
+                    <h3>Construction Management at Risk</h3>
+                    <p>Under this service, a manager acts as a consultant during the design phase and sets a guaranteed maximum price for the project.</p>
+                </div>
+            </div>
         </section>
         
     </main>
