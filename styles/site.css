@@ -389,8 +389,6 @@ section h2 {
     margin-bottom: 40px;
 }
 
-
-
 .container {
     width: 80%;
     margin:0px auto;
@@ -401,7 +399,7 @@ section h2 {
 .service {
     text-align: center;
     margin:20px;
-    background-color: #eaf4ea;
+    background-color: #edfcdd;
     padding:30px 20px;
     cursor: pointer;
     border:1px solid #2F6B3F;
