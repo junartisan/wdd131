@@ -97,4 +97,11 @@
         /* Go back to half-width on desktop */
         width: 50%;
     }
+
+}
+
+@media screen and (max-width:768px) {
+    .container {
+        flex-direction: column;
+    }
 }
